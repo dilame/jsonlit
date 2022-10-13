@@ -1,0 +1,49 @@
+{
+  "name": "jsonlit",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Template literal tag function that JSON.stringify(expressions)",
+  "main": "./cjs/jsonlit.js",
+  "types": "./src/jsonlit.ts",
+  "exports": {
+    ".": {
+      "import": "./esm/jsonlit.js",
+      "require": "./cjs/jsonlit.js",
+      "types": "./src/jsonlit.ts"
+    }
+  },
+  "files": [
+    "cjs",
+    "esm",
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "clean": "rm -rf ./cjs ./esm",
+    "build:esm": "tsc",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "prepublishOnly": "yarn build",
+    "prebuild": "yarn clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilame/jsonlit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dilame/jsonlit/issues"
+  },
+  "homepage": "https://github.com/dilame/jsonlit#readme",
+  "packageManager": "yarn@3.2.4",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "keywords": [
+    "json",
+    "tag",
+    "template",
+    "literal"
+  ]
+}

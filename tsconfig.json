@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.checks.json",
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "outDir": "./esm",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "removeComments": true,
+    "useDefineForClassFields": false,
+    "sourceMap": true,
+    "importHelpers": true,
+  }
+}
