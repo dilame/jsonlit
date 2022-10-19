@@ -1,4 +1,4 @@
-export function jsonLit(strings: string[], ...args: any[]) {
+export function jsonLit(strings: TemplateStringsArray, ...args: any[]) {
   let totalElements = strings.length + args.length;
   let intertwined = new Array(totalElements);
 
