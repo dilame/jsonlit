@@ -1,7 +1,7 @@
 {
   "name": "jsonlit",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Template literal tag function that JSON.stringify(expressions)",
   "main": "./cjs/jsonlit.js",
   "types": "./src/jsonlit.ts",
